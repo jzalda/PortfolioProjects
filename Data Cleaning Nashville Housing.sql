@@ -180,3 +180,7 @@ DROP COLUMN OwnerAddress, TaxDistrict, PropertyAddress
 ALTER TABLE PortfolioProject.dbo.NashvilleHousing
 DROP COLUMN SaleDate
 
+SELECT Acreage, LandValue, BuildingValue, TotalValue, 
+		ROUND(LandValue/Acreage, 0) as LandValuePerAcre,
+		ROUND(TotalValue/Acreage, 0) as TotalValuePerAcre
+FROM PortfolioProject.dbo.NashvilleHousing
